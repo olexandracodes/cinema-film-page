@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Movie 🍿</title>
+  </head>
+  <style>
+    body {
+      background-color: #c9c6cd;
+    }
+    h1 {
+      text-align: center;
+      text-shadow: 5px 5px 10px rgba(252, 226, 137, 0.5);
+      color: #fce289;
+      margin: 30px 0 10px 0;
+    }
+    h2 {
+      text-align: center;
+      border: 2px dotted #5c848e;
+      border-radius: 7px;
+      color: #fafafa;
+      margin: 20px auto;
+      max-width: 20%;
+      padding: 8px;
+      opacity: 60%;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 470px;
+      border-radius: 9px;
+    }
+    .page-container {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      margin: 20px 100px auto;
+      background: linear-gradient(
+        115deg,
+        rgb(0, 0, 0) 5.8%,
+        rgb(178, 14, 14) 112.6%
+      );
+      border: 2px inset #0b0900;
+      border-radius: 6px;
+      box-shadow: 10px 18px 76px 4px rgba(0, 0, 0, 0.4);
+      padding: 18px;
+    }
+    .info {
+      color: #5c848e;
+      background: rgba(0, 0, 0, 0.5);
+      font-size: 16px;
+      margin-bottom: 0;
+      line-height: 26px;
+      font-family: monospace;
+    }
+    a {
+      margin-top: 4px;
+      font-size: 14px;
+    }
+    button {
+      background-color: #841818;
+      color: #e0bb20;
+      display: block;
+      margin: 0 auto;
+      padding: 12px;
+      font-size: 20px;
+      border: 3px outset rgba(0, 0, 0, 0.6);
+      border-radius: 8px;
+      box-shadow: 10px 18px 76px 4px rgba(0, 0, 0, 0.4);
+      transition: 200ms ease-in-out;
+    }
+    button:hover {
+      background-color: #e0bb20;
+      opacity: 0.8;
+      color: #0d0003;
+      cursor: pointer;
+    }
+    .date-item {
+      font-weight: 100;
+      color: #5c848e;
+      opacity: 30%;
+    }
+
+    .footer {
+      color: #5c848e;
+      font-family: "Courier New", Courier, monospace;
+      text-align: center;
+      margin: 10px 0 0 0;
+      opacity: 60%;
+    }
+  </style>
+  <body>
+    <div class="page-container">
+      <h1>The Curious Case of Benjamin Button</h1>
+      <h2>
+        <em>Thursday</em> <span class="date-item">| </span> <em>19:00</em>
+      </h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/059/947/original/bb.jpg?1671665110"
+        alt=""
+      />
+      <hr />
+      <p class="info">
+        <strong
+          >The Curious Case of Benjamin Button is a 2008 American fantasy
+          romantic drama film directed by David Fincher.</strong
+        >
+
+        The storyline by Eric Roth and Robin Swicord is loosely based on the
+        1922 short story of the same name by F. Scott Fitzgerald. <br />
+        Film stars Brad Pitt as a man who ages in reverse and Cate Blanchett as
+        the love interest throughout his life. The film also stars Taraji P.
+        Henson, Mahershala Ali, Julia Ormond, Jason Flemyng, Elias Koteas, and
+        Tilda Swinton.
+      </p>
+      <a
+        href="https://www.imdb.com/title/tt0421715/?ref_=ttmi_tt"
+        target="_blank"
+        >Watch trailer 🎞️</a
+      >
+
+      <button class="buy-button">Buy Tickets 🎟️</button>
+      <p class="footer">
+        This page was built by <a href="">Olexandra Kunytska</a>
+      </p>
+    </div>
+    <script>
+      function tickets() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let number = prompt("How many tickets would you like?");
+
+        if (number > 0 && number <= 10) {
+          alert(
+            "Thank you, " +
+              name +
+              "! Your tickets have been sent to your email. Enjoy🎬"
+          );
+        } else {
+          alert("Sold out");
+        }
+      }
+
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", tickets);
+    </script>
+  </body>
+</html>
